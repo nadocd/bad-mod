@@ -45,7 +45,7 @@ public class BlocksJCM extends Blocks {
                             new ItemStack(ItemsJCM.graphite,2)
                     });
                     buildVisibility= BuildVisibility.shown;
-                    //drawer = new DrawMulti(new DrawFlame(Color.valueOf("ffef99")));
+                    drawer = new DrawMulti(new DrawFlame(Color.valueOf("ffef99")));
                 }},
                 "niotium-smelter");
 
