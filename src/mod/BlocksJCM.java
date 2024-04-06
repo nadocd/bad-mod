@@ -49,6 +49,6 @@ public class BlocksJCM extends Blocks {
                 }},
                 "niotium-smelter");
 
-        //Anuken plz add and fix DirectionalForceProjector(broken class!!!!! xd) to Mindustry
+        //Anuken plz fix and add DirectionalForceProjector(broken class!!!!! xd) to Mindustry
     }
 }
