@@ -18,7 +18,7 @@ public class BlocksJCM extends Blocks {
             niotiumSmelter;
 
     public static void load(){
-        Log.info("Loading JCM blocks");//no
+        Log.info("Loading JCM blocks");
 
         UnusableTrash.loadWarnOnError(
                 ()-> niotiumSmelter =new GenericCrafter("niotium-smelter"){{
