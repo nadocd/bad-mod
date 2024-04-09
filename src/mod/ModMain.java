@@ -40,6 +40,14 @@ public class ModMain extends Mod{
         UnitTypesJCM.load();
         BlocksJCM.load();
         PlanetsJCM.load();
+        if (UnusableTrash.failed>0) {
+            BaseDialog warn = new BaseDialog("");
+            warn.center();
+            warn.cont.add("Failed to load content");
+            warn.cont.row();
+            warn.cont.add("Please disable this mod and restart game");
+            warn.addCloseButton();
+        }
     }
 
     public void setNamesRU(){Time.run(10,()->{
