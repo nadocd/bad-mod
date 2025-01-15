@@ -1,0 +1,59 @@
+package mod.logic;
+
+import arc.scene.ui.layout.Table;
+import mindustry.logic.LAssembler;
+import mindustry.logic.LExecutor;
+import mindustry.logic.LStatement;
+
+public class MemoryIOFull {
+    //instruction
+    public static class MemoryIOInstruction implements LExecutor.LInstruction {
+        public int result;
+        public int block;
+        public int ioMode;
+        public int id;
+
+        public MemoryIOInstruction(){}
+        public MemoryIOInstruction(int result,int block,int ioMode,int id){
+            this.result=result;
+            this.block=block;
+            this.ioMode=ioMode;
+            this.id=id;
+        }
+
+        @Override
+        public void run(LExecutor exec) {
+            boolean isWrite = exec.bool(ioMode);
+            Object obj = exec.obj(block);
+            if(!(obj instanceof NewTypeMemoryBuild newTypeMemoryBuild)){
+                if (!isWrite) {
+                    exec.setobj(result, null);
+                }
+                return;
+            }
+            int index = exec.numi(id);
+            if(0>index||index>=newTypeMemoryBuild.contents.length){
+                exec.setobj(result,null);
+                return;
+            }
+            exec.setobj(result,newTypeMemoryBuild.contents[index]);
+        }
+    }
+    //statement
+    class MemoryIOStatement extends LStatement {
+        public String /* ... */;
+
+        public MemoryIOStatement(){
+            /* ... */
+        }
+
+        @Override
+        public void build(Table table) {
+            /* ... */
+        }
+        @Override
+        public LExecutor.LInstruction build(LAssembler builder) {
+            /* ... */
+        }
+    }
+}

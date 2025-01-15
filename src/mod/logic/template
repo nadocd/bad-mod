@@ -1,0 +1,39 @@
+public class _Full {
+    public static class _Instruction implements LExecutor.LInstruction {
+        //public int... vars...;
+
+        public _Instruction() {}
+        //public _Instruction(int... vars...) {...}
+        @Override
+        public void run(LExecutor lExecutor) {
+        }
+    }
+    public static class _Statement extends LStatement {
+        //public String... vars...;
+
+        public _Statement() {
+            //vars...=defaultValues...
+        }
+        @Override
+        public LCategory category() {
+            return LCategory.?; //LCategoryExtended
+        }
+        @Override
+        public void build(Table table) {
+            //rebuild(table);
+        }
+        //void rebuild(Table table) {}
+        @Override
+        public LExecutor.LInstruction build(LAssembler lAssembler) {
+            return new _Instruction(lAssembler.var(vars...));
+        }
+        public static _Statement read(String[] tokens) {//text code -> instance
+            _Statement result=new _Statement();
+            result.vars[n] = tokens[n+1]
+        }
+        @Override
+        public void write(StringBuilder builder) {//instance -> text code
+            builder.append("_ ").append(vars...);
+        }
+    }
+}

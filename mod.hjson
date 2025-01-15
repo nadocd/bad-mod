@@ -1,9 +1,9 @@
-displayName: "Just bad mod"
-name: "bm"
-author: "JavaCat"
+displayName: "LExtend"
+name: "jcm"
+author: "nadocd"
 main: "mod.ModMain"
-description: "Not a mod"
-version: 1.0
+description: "Mod that specifies on mlog programming language\n\nMostly adds new instructions"
+version: ln(e^1.00)
 minGameVersion: 145
 java: true
 hidden: false

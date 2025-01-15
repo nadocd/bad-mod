@@ -82,6 +82,10 @@ jar{
     from("assets/"){
         include "**"
     }
+
+    from("src/mod/"){
+        exclude("MemoryIOFull.java_unused")
+    }
 }
 
 task deploy(type: Jar){
